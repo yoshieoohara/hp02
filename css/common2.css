@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/* top */
+.top {
+  position: relative;
+  margin-top: 6.25rem;
+}
+
+.top-wrap {
+  width: 83.3%;
+  height: 30rem;
+  margin: 0 auto;
+}
+
+.top::before {
+  position: absolute;
+  content: "";
+  width: 44.4%;
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0, 69% 100%, 0% 100%);
+  background: linear-gradient(90deg, #73ec8b 0%, #2dcddf 100%);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.top::after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/about-fv-bg.png);
+  background-position: 50%;
+  background-size: cover;
+  width: 69.4%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+.page-ttl {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.page-ttl p {
+  font-size: 3.75rem;
+}
+
+.page-ttl p::first-letter {
+  font-size: 7.5rem;
+  color: #fff;
+}
+
+.page-ttl.s-ttl h2 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-top: 0.75rem;
+}
+
+/* breadcrumb */
+.breadcrumb-wrap {
+  max-width: 75rem;
+  padding: 2.5rem 2.5rem 0;
+}
+
+.breadcrumb-wrap__list {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-wrap__list__item {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.breadcrumb-wrap__list__item a {
+  transition: all 0.3s;
+}
+
+.breadcrumb-wrap__list__item a:hover {
+  opacity: 0.5;
+}
+
+.breadcrumb-wrap__list__item:not(:last-of-type)::after {
+  content: ">";
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0 1rem;
+}
+
+.__now {
+  color: #2dcddf;
+}
+
+@media screen and (max-width: 1024px) {
+  .top-wrap {
+    width: 84.3%;
+    height: 23.75rem;
+  }
+
+  .top::before {
+    width: 45.8%;
+  }
+
+  .top::after {
+    width: 75.7%;
+  }
+
+  .page-ttl p {
+    font-size: 2.5rem;
+  }
+
+  .page-ttl p::first-letter {
+    font-size: 5rem;
+  }
+
+  .page-ttl.s-ttl h2 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .breadcrumb-wrap__list__item {
+    font-size: 1.25rem;
+  }
+
+  .breadcrumb-wrap__list__item:not(:last-of-type)::after {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top-wrap {
+    width: 83.3%;
+    height: 11.25rem;
+  }
+
+  .top::before {
+    width: 50%;
+  }
+
+  .top::after {
+    width: 75%;
+  }
+
+  .page-ttl p {
+    font-size: 1.5rem;
+  }
+
+  .page-ttl p::first-letter {
+    font-size: 2.5rem;
+  }
+
+  .page-ttl.s-ttl h2 {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .top {
+    margin-top: 5rem;
+  }
+
+  .breadcrumb-wrap {
+    padding: 1.25rem 1.5rem 0;
+  }
+
+  .breadcrumb-wrap__list__item {
+    font-size: 1rem;
+  }
+
+  .breadcrumb-wrap__list__item:not(:last-of-type)::after {
+    font-size: 1rem;
+  }
+}
